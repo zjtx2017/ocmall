@@ -18,6 +18,11 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.zjtx</groupId>
+            <artifactId>ocmall-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>ocmall-goods</finalName>

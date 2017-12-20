@@ -1,42 +1,44 @@
 package com.zjtx.ocmall.order.entity;
 
+import com.zjtx.ocmall.base.BaseEntity;
+
 import java.math.BigDecimal;
 
-public class Order {
-    private String userNo;
-    private String goodId;
-    private BigDecimal price;
-    private Integer count;
+public class Order extends BaseEntity {
+  private String customerId;
+  private BigDecimal amount;
+  private BigDecimal discountAmt;
+  private Integer status;
 
-    public String getUserNo() {
-        return userNo;
-    }
+  public String getCustomerId() {
+    return customerId;
+  }
 
-    public void setUserNo(String userNo) {
-        this.userNo = userNo;
-    }
+  public void setCustomerId(String customerId) {
+    this.customerId = customerId;
+  }
 
-    public String getGoodId() {
-        return goodId;
-    }
+  public BigDecimal getAmount() {
+    return amount;
+  }
 
-    public void setGoodId(String goodId) {
-        this.goodId = goodId;
-    }
+  public void setAmount(BigDecimal amount) {
+    this.amount = amount;
+  }
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+  public BigDecimal getDiscountAmt() {
+    return discountAmt;
+  }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+  public void setDiscountAmt(BigDecimal discountAmt) {
+    this.discountAmt = discountAmt;
+  }
 
-    public Integer getCount() {
-        return count;
-    }
+  public Integer getStatus() {
+    return status;
+  }
 
-    public void setCount(Integer count) {
-        this.count = count;
-    }
+  public void setStatus(Integer status) {
+    this.status = status;
+  }
 }
