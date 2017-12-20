@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjtx.ocmall.customer.dao.CustomerDao">
+    <insert id="createCustomer" parameterType="com.zjtx.ocmall.customer.entity.Customer">
+        insert into t_ocmall_customer(user_name,real_name,password,create_time,update_time)
+        values(#{userName},#{realName},#{password},#{createTime},#{updateTime})
+    </insert>
+    <delete id="delById" parameterType="Integer">
+        delete from t_ocmall_customer where id = #{id}
+    </delete>
+    <update id="updateCustomer" parameterType="com.zjtx.ocmall.entity.Customer">
+        update t_ocmall_customer set user_name = #{userName},real_name = #{realName},
+        password = #{password} where id = #{id}
+    </update>
+    <select id="selectById">
+        select * from t_ocmall_customer where id = #{id}
+    </select>
+</mapper>

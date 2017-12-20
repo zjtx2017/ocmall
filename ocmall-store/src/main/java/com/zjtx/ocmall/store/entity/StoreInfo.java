@@ -9,8 +9,8 @@ import java.math.BigDecimal;
  * Date:2017/12/20
  */
 public class StoreInfo extends BaseEntity {
-  private Integer goodsId;
   private Integer leftCount;
+  private Integer goodsId;
 
   public Integer getGoodsId() {
     return goodsId;
