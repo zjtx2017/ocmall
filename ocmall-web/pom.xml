@@ -57,9 +57,21 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.29</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>ocmall</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -92,4 +104,31 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>dev_local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <database.driverClassName>com.mysql.jdbc.Driver</database.driverClassName>
+                <database.url><![CDATA[jdbc:mysql://localhost:3306/ocmall?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull]]></database.url>
+                <database.user>root</database.user>
+                <database.password>123456</database.password>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev_remote</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <database.driverClassName>com.mybatis.jdbc.Driver</database.driverClassName>
+                <database.url><![CDATA[jdbc:mybatis://l1076530116.51vip.biz:17569/ocmall?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull]]></database.url>
+                <database.user>root</database.user>
+                <database.password>123456</database.password>
+            </properties>
+        </profile>
+    </profiles>
 </project>

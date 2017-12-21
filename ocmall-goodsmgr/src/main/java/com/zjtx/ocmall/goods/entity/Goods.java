@@ -1,8 +1,6 @@
 package com.zjtx.ocmall.goods.entity;
 
-import com.zjtx.ocmall.base.BaseEntity;
-
-import java.math.BigDecimal;
+import com.zjtx.ocmall.framework.base.BaseEntity;
 
 /**
  * 商品实体类

@@ -9,11 +9,15 @@
     <delete id="delById" parameterType="Integer">
         delete from t_ocmall_customer where id = #{id}
     </delete>
-    <update id="updateCustomer" parameterType="com.zjtx.ocmall.entity.Customer">
+    <update id="updateCustomer" parameterType="CUM">
         update t_ocmall_customer set user_name = #{userName},real_name = #{realName},
         password = #{password} where id = #{id}
     </update>
-    <select id="selectById">
+    <select id="selectById" parameterType="Integer" resultType="CUM">
+        select * from t_ocmall_customer where id = #{ id}
+    </select>
+
+    <select id="selectByCondition" parameterType="CUQ" resultType="CUM">
         select * from t_ocmall_customer where id = #{id}
     </select>
 </mapper>

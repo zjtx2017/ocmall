@@ -1,6 +1,6 @@
 package com.zjtx.ocmall.goods.entity;
 
-import com.zjtx.ocmall.base.BaseEntity;
+import com.zjtx.ocmall.framework.base.BaseEntity;
 
 import java.math.BigDecimal;
 

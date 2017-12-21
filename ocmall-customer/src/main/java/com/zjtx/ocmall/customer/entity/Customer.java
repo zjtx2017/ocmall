@@ -1,6 +1,6 @@
 package com.zjtx.ocmall.customer.entity;
 
-import com.zjtx.ocmall.base.BaseEntity;
+import com.zjtx.ocmall.framework.base.BaseEntity;
 
 /**
  * 客戶管理实体类
@@ -32,5 +32,11 @@ public class Customer extends BaseEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        String res = "userName:"+this.userName+",realName:"+realName;
+        return res;
     }
 }

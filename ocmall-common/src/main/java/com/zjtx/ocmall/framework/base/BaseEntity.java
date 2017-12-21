@@ -1,4 +1,4 @@
-package com.zjtx.ocmall.base;
+package com.zjtx.ocmall.framework.base;
 
 import java.io.Serializable;
 import java.util.Date;
