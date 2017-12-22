@@ -6,6 +6,8 @@ public abstract class Dialect {
 
     public abstract String getLimitString(String var1, int var2, int var3);
 
+    public abstract String getTotalCountString(String sql);
+
     public abstract String addLog(String var1);
 
     public static enum Type {

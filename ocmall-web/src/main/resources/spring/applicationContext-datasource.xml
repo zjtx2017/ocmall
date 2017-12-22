@@ -55,7 +55,9 @@
 		</property>
 		<property name="plugins">
 			<list>
-				<bean class="com.zjtx.ocmall.framework.database.Sqllnterceptor" />
+				<bean class="com.zjtx.ocmall.framework.database.Sqllnterceptor" >
+					<property name="pattern" value="^.*Page.*$"/>
+				</bean>
 			</list>
 		</property>
 	</bean>

@@ -23,6 +23,11 @@ public class OracleDialect extends Dialect {
         return pagingSelect.toString();
     }
 
+    @Override
+    public String getTotalCountString(String sql) {
+        return null;
+    }
+
     public String addLog(String sql) {
         return null;
     }

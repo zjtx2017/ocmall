@@ -14,6 +14,11 @@ public class Mysql5Dialect extends Dialect {
         return Mysql5PageHelper.getLimitString(sql, offset, limit);
     }
 
+    @Override
+    public String getTotalCountString(String sql) {
+        return Mysql5PageHelper.getCountString(sql);
+    }
+
     public boolean supportsLimit() {
         return true;
     }
@@ -21,4 +26,6 @@ public class Mysql5Dialect extends Dialect {
     public String addLog(String sql) {
         return sql;
     }
+
+
 }
